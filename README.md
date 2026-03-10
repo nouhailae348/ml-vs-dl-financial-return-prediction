@@ -2,7 +2,7 @@
 
 **Authors:** AZNAK Meryam — EL BOUHALI Nouhaila  
 **Institution:** Faculty of Sciences, University Mohammed V, Rabat  
-**Course:** BIG DATA
+**Course:** Big Data
 
 ---
 
@@ -22,8 +22,8 @@ This project compares four models for predicting next-day financial returns acro
 ## Project Files
 
 ```
-├── MLvsDL_financialReturnPrediction.py  ← main code (all models + visualizations)
-├── clean_multi_asset_dataset.csv  ← dataset (8040 rows, 4 assets, 2018–2025)
+├── MLvsDL_financialReturnPrediction.py                          ← main code (all models + visualizations)
+├── financial_dataset_2018_2025.csv  ← dataset (8040 rows, 4 assets, 2018–2025)
 ├── MLvsDL_financialReturnPrediction.pdf  ← IEEE paper
 └── README.md                      ← this file
 ```
@@ -31,6 +31,26 @@ This project compares four models for predicting next-day financial returns acro
 ---
 
 ## How to Run
+
+### Option 1 — Google Colab (recommended)
+
+1. Go to [https://colab.research.google.com](https://colab.research.google.com)
+2. Create a new notebook
+3. Upload both files to the Colab session:
+   - `MLvsDL_financialReturnPrediction.py`
+   - `financial_dataset_2018_2025.csv`
+4. Run the following in a cell:
+
+```python
+!pip install scikit-learn tensorflow pandas numpy matplotlib seaborn
+exec(open("MLvsDL_financialReturnPrediction.py").read())
+```
+
+That's it — all models will train and all figures will be saved automatically.
+
+---
+
+### Option 2 — Local Machine
 
 **Requirements:** Python 3.8+
 
@@ -44,7 +64,7 @@ pip install scikit-learn tensorflow pandas numpy matplotlib seaborn
 python MLvsDL_financialReturnPrediction.py
 ```
 
-Make sure `clean_multi_asset_dataset.csv` is in the same folder as `MLvsDL_financialReturnPrediction.py`.
+Make sure `financial_dataset_2018_2025.csv` is in the same folder as `MLvsDL_financialReturnPrediction.py`.
 
 ---
 
@@ -52,7 +72,7 @@ Make sure `clean_multi_asset_dataset.csv` is in the same folder as `MLvsDL_finan
 
 | Step | What happens |
 |---|---|
-| 1 | Loads `clean_multi_asset_dataset.csv` |
+| 1 | Loads `financial_dataset_2018_2025.csv` |
 | 2 | Engineers 20 features (lagged returns, volatility, momentum, volume, intraday gaps) |
 | 3 | Splits data: train (80%) / test (20%), time-ordered — no data leakage |
 | 4 | Scales features using StandardScaler |
@@ -84,7 +104,7 @@ After running, the following files will be saved:
 
 ## Dataset Description
 
-**File:** `clean_multi_asset_dataset.csv`  
+**File:** `financial_dataset_2018_2025.csv`  
 **Rows:** 8,040 (one per asset per trading day)  
 **Period:** January 2, 2018 — December 30, 2025  
 **Source:** Yahoo Finance via yfinance library  

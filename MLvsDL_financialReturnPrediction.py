@@ -16,7 +16,7 @@ warnings.filterwarnings('ignore')
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
-CSV_FILE       = 'clean_multi_asset_dataset.csv'
+CSV_FILE       = 'financial_dataset_2018_2025.csv'
 TEST_SIZE      = 0.2
 LSTM_TIMESTEPS = 10
 EPOCHS         = 100
