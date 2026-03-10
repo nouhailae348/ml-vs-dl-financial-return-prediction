@@ -22,7 +22,7 @@ This project compares four models for predicting next-day financial returns acro
 ## Project Files
 
 ```
-├── ml.py                          ← main code (all models + visualizations)
+├── MLvsDL_financialReturnPrediction.py  ← main code (all models + visualizations)
 ├── clean_multi_asset_dataset.csv  ← dataset (8040 rows, 4 assets, 2018–2025)
 ├── MLvsDL_financialReturnPrediction.pdf  ← IEEE paper
 └── README.md                      ← this file
@@ -31,26 +31,6 @@ This project compares four models for predicting next-day financial returns acro
 ---
 
 ## How to Run
-
-### Option 1 — Google Colab (recommended)
-
-1. Go to [https://colab.research.google.com](https://colab.research.google.com)
-2. Create a new notebook
-3. Upload both files to the Colab session:
-   - `ml.py`
-   - `clean_multi_asset_dataset.csv`
-4. Run the following in a cell:
-
-```python
-!pip install scikit-learn tensorflow pandas numpy matplotlib seaborn
-exec(open("ml.py").read())
-```
-
-That's it — all models will train and all figures will be saved automatically.
-
----
-
-### Option 2 — Local Machine
 
 **Requirements:** Python 3.8+
 
@@ -61,10 +41,10 @@ pip install scikit-learn tensorflow pandas numpy matplotlib seaborn
 
 **Run:**
 ```bash
-python ml.py
+python MLvsDL_financialReturnPrediction.py
 ```
 
-Make sure `clean_multi_asset_dataset.csv` is in the same folder as `ml.py`.
+Make sure `clean_multi_asset_dataset.csv` is in the same folder as `MLvsDL_financialReturnPrediction.py`.
 
 ---
 
