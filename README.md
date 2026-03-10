@@ -1,11 +1,5 @@
 # Comparative Study of Machine Learning vs Deep Learning Models in Financial Return Prediction
 
-**Authors:** AZNAK Meryam — EL BOUHALI Nouhaila  
-**Institution:** Faculty of Sciences, University Mohammed V, Rabat  
-**Course:** Big Data
-
----
-
 ## Project Overview
 
 This project compares four models for predicting next-day financial returns across four major assets (^GSPC, AAPL, MSFT, GOOGL) using daily data from 2018 to 2025.
@@ -32,7 +26,7 @@ This project compares four models for predicting next-day financial returns acro
 
 ## How to Run
 
-### Option 1 — Google Colab (recommended)
+### Option 1 : Google Colab 
 
 1. Go to [https://colab.research.google.com](https://colab.research.google.com)
 2. Create a new notebook
@@ -50,7 +44,7 @@ That's it — all models will train and all figures will be saved automatically.
 
 ---
 
-### Option 2 — Local Machine
+### Option 2 : Local Machine
 
 **Requirements:** Python 3.8+
 
@@ -119,25 +113,3 @@ After running, the following files will be saved:
 | Volume | Trading volume |
 | Asset_ID | Ticker symbol (AAPL, MSFT, GOOGL, ^GSPC) |
 | Asset_ID_encoded | Numeric encoding of Asset_ID |
-
----
-
-## Key Findings
-
-- **Random Forest** achieved the best performance (R²=0.7722) by effectively capturing non-linear interactions among engineered features
-- **Linear Regression** performed surprisingly well (R²=0.7003), suggesting strong linear relationships in intraday price features
-- **LSTM** underperformed (R²=−0.0293) due to insufficient training sequences — approximately 1,262 per asset, far below what LSTM needs to learn temporal patterns
-- **Open–Close gap** and **High–Low range** were consistently the most important predictors across all models
-
----
-
-## Dependencies
-
-| Library | Version | Purpose |
-|---|---|---|
-| pandas | ≥1.3 | Data manipulation |
-| numpy | ≥1.21 | Numerical computing |
-| scikit-learn | ≥1.0 | LR, RF, scaling, metrics |
-| tensorflow | ≥2.10 | ANN, LSTM |
-| matplotlib | ≥3.5 | Visualizations |
-| seaborn | ≥0.11 | Visualizations |
