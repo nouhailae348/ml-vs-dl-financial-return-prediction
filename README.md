@@ -40,7 +40,7 @@ This project compares four models for predicting next-day financial returns acro
 exec(open("MLvsDL_financialReturnPrediction.py").read())
 ```
 
-That's it — all models will train and all figures will be saved automatically.
+That's it all models will train and all figures will be saved automatically.
 
 ---
 
