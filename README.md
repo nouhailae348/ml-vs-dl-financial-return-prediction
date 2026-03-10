@@ -2,7 +2,7 @@
 
 **Authors:** AZNAK Meryam — EL BOUHALI Nouhaila  
 **Institution:** Faculty of Sciences, University Mohammed V, Rabat  
-**Course:** Master IDLD
+**Course:** BIG DATA
 
 ---
 
